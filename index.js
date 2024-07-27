@@ -33,7 +33,7 @@ async function init() {
 init();
 
 // Endpoint for image classification
-app.post('/predict', upload.single('image'), async (req, res) => {
+app.post('/api/predict', upload.single('image'), async (req, res) => {
   if (!model) {
     return res.status(500).send('Model not loaded yet');
   }
